@@ -1,0 +1,194 @@
+<html>
+   <head>
+      <title>Javascript game</title>
+
+      <style>
+         body {
+            width: 100%;
+            margin-left: 0 auto;
+         }
+         .field {
+            width: 600px;
+         }
+         .ghor {
+            width: 188px;
+            height: 150px;
+            border: 2px solid purple;
+            float: left;
+         }
+         h1 {
+            text-shadow: 2px 5px 12px blue;
+            font-size: 45px;
+            color: white;
+         }
+         h2 {
+            font-size: 45px;
+         }
+         .blue {
+            color: blue;
+            font-size: 30px;
+         }
+         h1 {
+            color: orange;
+            text-shadow: 4px 4px navy;
+            text-align: center;
+         }
+         .container{
+            width: 575px;
+            height: auto;
+            border: 2px solid green;
+            margin: 0 auto;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <h2 id="h2">amar sonar bangla</h2>
+
+         <div class="field">
+            <div class="ghor" onclick="play()">
+               <!-- <audio id="audio" src="sounds/boom.wav"></audio> -->
+            </div>
+            <div class="ghor" onclick="play1()"></div>
+            <div class="ghor" onclick="play2()"></div>
+            <div class="ghor" onclick="play3()"></div>
+            <div class="ghor" onclick="play4()"></div>
+            <div class="ghor" onclick="play5()"></div>
+            <div class="ghor" onclick="play6()"></div>
+            <div class="ghor" onclick="play7()"></div>
+            <div class="ghor" onclick="play8()"></div>
+         </div>
+      
+         <!-- audios -->
+         <audio id="audio" src="sounds/sad1.mp3"></audio>
+         <audio id="audio1" src="sounds/sad3.mp3"></audio>
+         <audio id="audio2" src="sounds/sad5.mp3"></audio>
+         <audio id="audio3" src="sounds/sad7.mp3"></audio>
+         <audio id="audio4" src="sounds/sad9.mp3"></audio>
+         <audio id="audio5" src="sounds/sad2.mp3"></audio>
+         <audio id="audio6" src="sounds/sad4.mp3"></audio>
+         <audio id="audio7" src="sounds/sad6.mp3"></audio>
+         <audio id="audio8" src="sounds/sad8.mp3"></audio>
+
+         <h1>Abdul Gaffar as a JavaScript Programr</h1>
+      </div>
+      <script>
+         document.getElementById("h2").innerHTML =
+            "Click on the boxes and see magic!";
+
+         // audio func
+         function play() {
+            document.getElementById("audio").play();
+         }
+         function play1() {
+            document.getElementById("audio1").play();
+         }
+         function play2() {
+            document.getElementById("audio2").play();
+         }
+         function play3() {
+            document.getElementById("audio3").play();
+         }
+         function play4() {
+            document.getElementById("audio4").play();
+         }
+         function play5() {
+            document.getElementById("audio5").play();
+         }
+         function play6() {
+            document.getElementById("audio6").play();
+         }
+         function play7() {
+            document.getElementById("audio7").play();
+         }
+         function play8() {
+            document.getElementById("audio8").play();
+         }
+
+         // style javascript code;
+
+         const field = document.querySelector(".field");
+         const ghor = document.querySelectorAll(".ghor");
+
+         var count = 0;
+         field.addEventListener("click", (e) => {
+            count += 1;
+            e.target.innerHTML = count;
+            if (count === 1) {
+               e.target.style.cssText = `
+            background-color: red;
+            color: green;
+            font-size: 90px;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px yellow`;
+            } else if (count === 2) {
+               e.target.style.cssText = `color: green;
+            font-size: 90px;
+            background-color: green;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px yellow`;
+            } else if (count === 3) {
+               e.target.style.cssText = `color: green;
+            font-size: 90px;
+            background-color: blue;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px yellow`;
+            } else if (count === 4) {
+               e.target.style.cssText = `color: green;
+            font-size: 90px;
+            background-color: yellow;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px red`;
+            } else if (count === 5) {
+               e.target.style.cssText = `color: green;
+            font-size: 90px;
+            background-color: fuchsia;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px yellow`;
+            } else if (count === 6) {
+               e.target.style.cssText = `color: green;
+            font-size: 90px;
+            background-color: aqua;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px lime`;
+            } else if (count === 7) {
+               e.target.style.cssText = `color: green;
+            font-size: 90px;
+            background-color: brown;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px yellow`;
+            } else if (count === 8) {
+               e.target.style.cssText = `color: green;
+            font-size: 90px;
+            background-color: navy;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px yellow`;
+            } else if (count === 9) {
+               e.target.style.cssText = `color: green;
+            font-size: 90px;
+            background-color: #e17055;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            text-shadow: 3px 6px 9px yellow`;
+            }
+         });
+      </script>
+   </body>
+</html>
